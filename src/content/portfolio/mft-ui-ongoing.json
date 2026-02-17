@@ -1,0 +1,15 @@
+{
+  "title": "Managed File Transfer (MFT) Dashboard & Infrastructure",
+  "category": "cloud-infra",
+  "desc": "Building a Streamlit-based internal dashboard for FICO's Managed File Transfer platform to enable real-time file transfer monitoring and workflow management.",
+  "highlights": [
+    "Leading frontend development using Python Streamlit",
+    "Designing AWS infrastructure (load balancing, auto-scaling, Docker-based deployment)",
+    "Integrating backend APIs via AWS API Gateway (GET/POST/PUT workflows)",
+    "Enabling real-time monitoring and workflow initialization for internal teams"
+  ],
+  "tech": ["Python", "Streamlit", "AWS", "Docker", "AWS API Gateway", "HTML/CSS"],
+  "order": 1,
+  "status": "ongoing",
+  "slug": "mft-dashboard"
+}

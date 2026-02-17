@@ -1,0 +1,16 @@
+{
+  "title": "FICO Managed File Transfer System",
+  "category": "cloud-infra",
+  "desc": "Led the design and implementation of FICO's internal Managed File Transfer system—a scalable, secure, and high-performance infrastructure built with AWS, Terraform, and Python.\n\nServing as a customer-facing alternative to AWS Transfer Family, this system is now adopted across the organization. Worked closely with internal stakeholders to translate complex customer file-transfer requirements into automated ETL workflows, with full production deployment ownership.",
+  "highlights": [
+    "Built scalable, secure file transfer infrastructure using AWS, Terraform, and Python",
+    "Designed as customer-facing alternative to AWS Transfer Family",
+    "Automated ETL workflows for complex file-transfer requirements",
+    "Full production deployment ownership and stakeholder management",
+    "Featured in official AWS Blog post for modernizing data transfer at scale"
+  ],
+  "tech": ["AWS", "Terraform", "Python", "AWS Transfer Family", "ETL", "S3", "Lambda"],
+  "order": 1,
+  "demoLink": "https://aws.amazon.com/blogs/storage/how-fico-modernizes-file-transfers-with-etl-automation-using-aws-transfer-family/",
+  "demoLinkRel": "nofollow noopener noreferrer"
+}

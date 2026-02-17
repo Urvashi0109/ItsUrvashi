@@ -1,0 +1,322 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { PROFESSIONAL_SUMMARY, SKILLS, SOCIAL_LINKS, SITE_EMAIL, SITE_PHONE } from '../consts';
+
+// Using image from public folder
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : rawBase + '/';
+const Ava = `${base}perfect.jpeg`;
+---
+
+<BaseLayout
+	title="About Me | Urvashi Choubey"
+	description="Cloud Engineer with 2.5+ years of experience in AWS, Kubernetes, Terraform, and GitOps. Kubernetes Maintainer."
+>
+  <div class='container py-8'>
+
+		<!-- Quick Navigation -->
+		<nav class="mb-8">
+			<div class="flex flex-wrap gap-2 justify-center">
+				<a href="#about-me" class="inline-flex items-center px-3 py-1.5 text-sm border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">About Me</a>
+				<a href="#experience" class="inline-flex items-center px-3 py-1.5 text-sm border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Experience</a>
+				<a href="#open-source" class="inline-flex items-center px-3 py-1.5 text-sm border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Open Source</a>
+				<a href="#certifications" class="inline-flex items-center px-3 py-1.5 text-sm border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Certifications</a>
+				<a href="#achievements" class="inline-flex items-center px-3 py-1.5 text-sm border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Achievements</a>
+				<a href="#skills" class="inline-flex items-center px-3 py-1.5 text-sm border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Skills</a>
+				<a href="#education" class="inline-flex items-center px-3 py-1.5 text-sm border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Education</a>
+				<a href="#contact" class="inline-flex items-center px-3 py-1.5 text-sm border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Get In Touch</a>
+			</div>
+		</nav>
+
+		<!-- Hero Section -->
+		<div id="about-me" class='w-full lg:flex lg:items-start gap-12 mb-12 scroll-mt-20'>
+			<div class="flex-1">
+				<h1 class="text-4xl font-bold mb-4">About Me</h1>
+				<p class="text-xl text-primary font-semibold mb-6">
+					Cloud Engineer | Kubernetes Maintainer
+				</p>
+				<div class="prose prose-lg max-w-none">
+				<p class="text-gray-600 dark:text-gray-300 leading-relaxed" set:html={PROFESSIONAL_SUMMARY}>
+				</p>
+			</div>
+			</div>
+			<img
+				src={Ava}
+				alt="Urvashi Choubey"
+				width="300"
+				class="rounded-2xl shadow-xl mt-8 lg:mt-0"
+			/>
+		</div>
+
+		<!-- Professional Experience Section -->
+		<div id="experience" class="mb-12 scroll-mt-20">
+			<h2 class="text-3xl font-bold mb-6">Professional Experience</h2>
+			<div class="rounded-xl bg-gray-100 dark:bg-gray-800 shadow-lg">
+				<div class="p-6">
+					<div class="flex justify-between items-start mb-6 flex-wrap gap-2">
+						<div>
+							<h3 class="text-2xl font-semibold">Cloud Engineer</h3>
+							<p class="text-lg font-semibold text-primary">Fair Isaac India Software Private Limited (FICO)</p>
+						</div>
+						<span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary">May 2022 - Present</span>
+					</div>
+
+					<!-- MFT System UI -->
+					<div class="mb-6">
+						<h4 class="font-semibold text-lg mb-1">Managed File Transfer System UI</h4>
+						<p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-2">
+							Leading the design and development of a Streamlit-based dashboard for FICO's Managed File Transfer platform, enabling internal teams to monitor transfers and manage workflows in real time.
+						</p>
+						<div class="flex flex-wrap gap-1.5 mt-2">
+							<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border border-gray-300 dark:border-gray-600">Python Streamlit</span>
+							<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border border-gray-300 dark:border-gray-600">AWS ECS</span>
+							<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border border-gray-300 dark:border-gray-600">CloudWatch</span>
+							<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border border-gray-300 dark:border-gray-600">ALB</span>
+							<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border border-gray-300 dark:border-gray-600">GitHub Actions</span>
+							<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border border-gray-300 dark:border-gray-600">IAM</span>
+						</div>
+					</div>
+
+					<hr class="border-gray-200 dark:border-gray-700 my-4" />
+
+					<!-- AWS Managed File Transfer System -->
+					<div class="mb-6">
+						<h4 class="font-semibold text-lg mb-1">AWS Managed File Transfer System</h4>
+						<p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-2">
+							Co-developed a modular <a href="https://aws.amazon.com/blogs/storage/how-fico-modernizes-file-transfers-with-etl-automation-using-aws-transfer-family/" target="_blank" rel="noopener noreferrer" class="text-primary underline font-medium">MFT architecture</a> composed of transfer, orchestration, and execution layers.
+						</p>
+						<ul class="space-y-1 text-sm text-gray-500 dark:text-gray-400">
+							<li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Designed for scalability and cost efficiency</span></li>
+							<li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Implemented secure, production-grade integrations</span></li>
+							<li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Built enterprise-ready file transfer workflows</span></li>
+						</ul>
+					</div>
+
+					<hr class="border-gray-200 dark:border-gray-700 my-4" />
+
+					<!-- Client-Focused Solution Development -->
+					<div class="mb-6">
+						<h4 class="font-semibold text-lg mb-1">Client-Focused Solution Development</h4>
+						<p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-2">
+							Worked directly with clients to understand business requirements and deliver tailored file transfer solutions.
+						</p>
+						<ul class="space-y-1 text-sm text-gray-500 dark:text-gray-400">
+							<li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Designed and provisioned secure S3-to-S3 transfer workflows</span></li>
+							<li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Implemented end-to-end infrastructure with security best practices</span></li>
+							<li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Delivered production-ready features directly used by clients</span></li>
+						</ul>
+						<p class="text-xs text-gray-400 dark:text-gray-500 mt-2 italic">
+							This exposure helped me understand client expectations, solution design trade-offs, and real-world enterprise constraints.
+						</p>
+					</div>
+
+					<hr class="border-gray-200 dark:border-gray-700 my-4" />
+
+					<!-- Kubernetes-Native Infrastructure -->
+					<div class="mb-6">
+						<h4 class="font-semibold text-lg mb-1">Kubernetes-Native Infrastructure</h4>
+						<p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-2">
+							Led migration from Terraform-based provisioning to Kubernetes-native IaC using Crossplane.
+						</p>
+						<ul class="space-y-1 text-sm text-gray-500 dark:text-gray-400">
+							<li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Enabled self-service infrastructure for developers</span></li>
+							<li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Reduced provisioning time from ~2 weeks to 5–10 minutes</span></li>
+							<li class="flex items-start gap-2"><span class="text-primary mt-0.5">•</span><span>Integrated with GitHub-based workflows</span></li>
+						</ul>
+					</div>
+
+					<hr class="border-gray-200 dark:border-gray-700 my-4" />
+
+					<!-- Automation & CI/CD -->
+					<div>
+						<h4 class="font-semibold text-lg mb-1">Automation & CI/CD</h4>
+						<p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+							Built GitHub Actions workflows and automation pipelines to eliminate manual processes and improve deployment consistency.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Open Source Contributions Section with Timeline -->
+		<div id="open-source" class="mb-12 scroll-mt-20">
+			<h2 class="text-3xl font-bold mb-6">Open Source Contributions</h2>
+			
+			<!-- Timeline -->
+			<div class="rounded-xl bg-gray-100 dark:bg-gray-800 shadow-lg mb-6">
+				<div class="p-6">
+					<h3 class="text-lg font-semibold mb-4">Kubernetes Release Team Journey</h3>
+					
+					<div class="relative border-l-2 border-primary ml-4 space-y-8 pl-8">
+							<!-- Step 1: Currently Active -->
+							<div class="relative">
+								<div class="absolute -left-[2.6rem] top-0 w-5 h-5 rounded-full bg-primary"></div>
+								<div class="p-4 rounded-lg bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/40">
+									<div class="font-semibold text-primary">Currently Active</div>
+									<div class="text-sm text-gray-500 dark:text-gray-400">Present</div>
+									<div class="text-sm mt-1">
+										<strong>Working on:</strong>
+										<ul class="list-disc list-inside mt-1 space-y-1">
+											<li>Enhancing SIG Release Handbook documentation</li>
+											<li>Kubernetes Maintainer (v1.33 onwards)</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+	
+							<!-- Step 2: Release Doc Lead -->
+							<div class="relative">
+								<div class="absolute -left-[2.6rem] top-0 w-5 h-5 rounded-full bg-green-500"></div>
+								<div class="p-4 rounded-lg bg-white dark:bg-gray-900">
+									<div class="font-semibold text-green-600 dark:text-green-400">Kubernetes Release Doc Lead</div>
+									<div class="text-sm text-gray-500 dark:text-gray-400">v1.35 (Released)</div>
+									<div class="text-sm mt-1">Led the documentation team for Kubernetes v1.35 release</div>
+								</div>
+							</div>
+	
+							<!-- Step 3: Doc Shadow -->
+							<div class="relative">
+								<div class="absolute -left-[2.6rem] top-0 w-5 h-5 rounded-full bg-primary"></div>
+								<div class="p-4 rounded-lg bg-white dark:bg-gray-900">
+									<div class="font-semibold">Doc Shadow</div>
+									<div class="text-sm mt-1">Started contributing to Kubernetes Release v1.33 Jan 2025 as Documentation Shadow</div>
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Certifications Section -->
+		<div id="certifications" class="mb-12 scroll-mt-20">
+			<h2 class="text-3xl font-bold mb-6">Certifications</h2>
+			<div class="rounded-xl bg-gray-100 dark:bg-gray-800 shadow-lg">
+				<div class="p-6">
+					<a href="https://www.credly.com/badges/05347b2d-b681-4b65-a1bc-3f9f6543fa15" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 group">
+						<img src={`${base}k8slogo.png`} alt="Kubernetes" class="w-10 h-10 object-contain" />
+						<div>
+							<h3 class="font-semibold text-lg group-hover:text-primary transition-colors">Kubernetes and Cloud-Native Associate (KCNA)</h3>
+							<p class="text-gray-500 dark:text-gray-400">Linux Foundation</p>
+							<p class="text-xs text-primary mt-1">View Certificate →</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Achievements Section -->
+		<div id="achievements" class="mb-12 scroll-mt-20">
+			<h2 class="text-3xl font-bold mb-6">Achievements</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+				<div class="rounded-xl bg-gradient-to-br from-primary/10 to-secondary/10 shadow-lg p-6">
+					<h3 class="font-semibold">🎤 Speaker – PyCon India 2025</h3>
+					<p class="text-sm text-gray-500 dark:text-gray-400">Platform Engineering Track - Presenting on Dagger and Ruff</p>
+				</div>
+				<div class="rounded-xl bg-gradient-to-br from-primary/10 to-secondary/10 shadow-lg p-6">
+					<h3 class="font-semibold">🏆 Multiple Spot Awards @FICO</h3>
+					<p class="text-sm text-gray-500 dark:text-gray-400">In ~ 3 years for exceptional performance</p>
+				</div>
+				<div class="rounded-xl bg-gradient-to-br from-primary/10 to-secondary/10 shadow-lg p-6">
+					<h3 class="font-semibold">🥇 The Great India Hackathon 2022</h3>
+					<p class="text-sm text-gray-500 dark:text-gray-400">1st Position (Reskill & Microsoft Azure track)</p>
+				</div>
+				<div class="rounded-xl bg-gradient-to-br from-primary/10 to-secondary/10 shadow-lg p-6">
+					<h3 class="font-semibold">📜 Patent Holder</h3>
+					<p class="text-sm text-gray-500 dark:text-gray-400">Auto Cut Gas Fired Geyser with Alarm (Application No.202211065867)</p>
+				</div>
+				<div class="rounded-xl bg-gradient-to-br from-primary/10 to-secondary/10 shadow-lg p-6">
+					<h3 class="font-semibold">🎯 Smart India Hackathon 2022</h3>
+					<p class="text-sm text-gray-500 dark:text-gray-400">Nominated for Round 1</p>
+				</div>
+				<div class="rounded-xl bg-gradient-to-br from-primary/10 to-secondary/10 shadow-lg p-6">
+					<h3 class="font-semibold">💻 Flipkart GRiD 4.0</h3>
+					<p class="text-sm text-gray-500 dark:text-gray-400">Qualified Level 1</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Technical Skills Section -->
+		<div id="skills" class="mb-12 scroll-mt-20">
+			<h2 class="text-3xl font-bold mb-6">Technical Skills</h2>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+				<div class="rounded-xl bg-gray-100 dark:bg-gray-800 shadow-lg p-6">
+					<h3 class="text-lg font-semibold mb-3">Infrastructure</h3>
+					<div class="flex flex-wrap gap-2">
+						{SKILLS.infrastructure.map(skill => (
+							<span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary">{skill}</span>
+						))}
+					</div>
+				</div>
+				<div class="rounded-xl bg-gray-100 dark:bg-gray-800 shadow-lg p-6">
+					<h3 class="text-lg font-semibold mb-3">Languages</h3>
+					<div class="flex flex-wrap gap-2">
+						{SKILLS.languages.map(skill => (
+							<span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-accent/10 text-accent">{skill}</span>
+						))}
+					</div>
+				</div>
+				<div class="rounded-xl bg-gray-100 dark:bg-gray-800 shadow-lg p-6">
+					<h3 class="text-lg font-semibold mb-3">DevOps Tools</h3>
+					<div class="flex flex-wrap gap-2">
+						{SKILLS.devops.map(skill => (
+							<span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">{skill}</span>
+						))}
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Education Section -->
+		<div id="education" class="mb-12 scroll-mt-20">
+			<h2 class="text-3xl font-bold mb-6">Education</h2>
+			<div class="rounded-xl bg-gray-100 dark:bg-gray-800 shadow-lg">
+				<div class="p-6">
+					<div class="flex justify-between items-start flex-wrap gap-4">
+						<div>
+							<h3 class="text-lg font-semibold">Bachelor of Engineering in Computer Science</h3>
+							<p class="text-lg font-semibold text-primary">Chitkara University</p>
+							<p class="text-gray-500 dark:text-gray-400">Punjab, India</p>
+						</div>
+						<div class="text-right">
+							<span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary mb-2">9.93 CGPA</span>
+							<p class="text-sm text-gray-500 dark:text-gray-400">Sep 2020 - Jul 2024</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Get In Touch Section -->
+		<div id="contact" class="mb-12 scroll-mt-20">
+			<h2 class="text-3xl font-bold mb-6">Get In Touch</h2>
+			<div class="rounded-xl bg-gradient-to-br from-primary/10 to-secondary/10 shadow-lg">
+				<div class="p-6">
+					<p class="text-lg mb-4">
+						I'm always interested in hearing about new opportunities, collaborations, or just connecting with fellow tech enthusiasts!
+					</p>
+					<div class="flex flex-wrap gap-4">
+						<a href={SOCIAL_LINKS.email} class="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg font-medium hover:bg-primary-600 transition-colors">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+							</svg>
+							Email Me
+						</a>
+						<a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+								<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+							</svg>
+							LinkedIn
+						</a>
+						<a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+								<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+							</svg>
+							GitHub
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+  </div>
+</BaseLayout>

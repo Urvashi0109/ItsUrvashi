@@ -1,0 +1,15 @@
+{
+  "title": "TRAXIMO - Move to Play Gaming Platform",
+  "category": "personal",
+  "desc": "A Hackathon winning project - collection of #moveToPlay webcam games, deployed on Azure which encourages physical activities to play digital games.\n\nThe goal was to blend the immersiveness of the virtual world with the active movements of the physical world without any external expensive devices. Won 1st position at The Great India Hackathon 2022 (Reskill and Microsoft Azure track).",
+  "highlights": [
+    "1st Position at The Great India Hackathon 2022",
+    "Webcam-based motion detection gaming",
+    "Deployed on Microsoft Azure",
+    "Encourages physical activity through gaming",
+    "No external devices required",
+    "Blends virtual and physical worlds"
+  ],
+  "tech": ["Azure", "Python", "OpenCV", "Computer Vision", "Web Development", "JavaScript"],
+  "order": 4
+}

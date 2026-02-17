@@ -1,0 +1,15 @@
+{
+  "title": "Kubernetes-Native Infrastructure with Crossplane & GitOps",
+  "category": "automation",
+  "desc": "Spearheaded migration from Terraform to Kubernetes-native infrastructure as code (IaC) using Crossplane, revolutionizing deployment processes across the department.\n\nAutomated configuration management with Crossplane's reconciliation loop, eliminating infrastructure drift and reducing maintenance overhead. Architected and deployed GitOps workflow with Argo CD that transformed infrastructure provisioning for developers from a 2-week process to 5-10 minutes through self-service GitHub repositories and automated synchronization.",
+  "highlights": [
+    "Migrated from Terraform to Crossplane for Kubernetes-native IaC",
+    "Eliminated infrastructure drift (~100%) with automated reconciliation",
+    "Reduced maintenance overhead by ~30% through automation",
+    "Implemented GitOps workflow with Argo CD",
+    "Reduced provisioning time from 2 weeks to 5-10 minutes",
+    "Enabled self-service infrastructure through GitHub repositories"
+  ],
+  "tech": ["Kubernetes", "Crossplane", "Argo CD", "GitOps", "Terraform", "GitHub Actions", "YAML"],
+  "order": 2
+}

@@ -1,0 +1,16 @@
+{
+  "title": "Kubernetes Open Source Contributions",
+  "category": "open-source",
+  "desc": "Active contributor to the Kubernetes Release Team, supporting release coordination and documentation as part of the maintainer workflow.\n\nServing as a Kubernetes Maintainer since December 2024, contributing to the v1.33 release and leading the upcoming Kubernetes Release Doc Team v1.35. Recognized contributor to the Kubernetes Open Source Community and active member of the v1.34 Release Doc Team.",
+  "highlights": [
+    "Kubernetes Maintainer (v1.33 – Present)",
+    "Leading Kubernetes Release Doc Team v1.35",
+    "Active member of v1.34 Release Doc Team",
+    "Contributing to release coordination and documentation",
+    "Part of Kubernetes Open Source Community",
+    "Certified Kubernetes and Cloud-Native Associate (KCNA)"
+  ],
+  "tech": ["Kubernetes", "Go", "Git", "GitHub", "Documentation", "Open Source"],
+  "order": 3,
+  "githubLink": "https://github.com/kubernetes/kubernetes"
+}

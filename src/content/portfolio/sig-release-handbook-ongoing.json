@@ -1,0 +1,17 @@
+{
+  "title": "SIG Release Handbook Enhancement",
+  "category": "open-source",
+  "desc": "Improving the Kubernetes SIG Release Handbook based on gaps identified while serving as Release Doc Lead for v1.35. Adding practical examples, effective strategies, and clearer guidance for future release doc teams.",
+  "highlights": [
+    "Documenting strategies that proved effective during the v1.35 release cycle",
+    "Adding real-world examples and templates for release documentation workflows",
+    "Closing gaps in existing handbook guidance for the release doc team",
+    "Contributing improvements upstream to the Kubernetes SIG Release community"
+  ],
+  "tech": ["Open Source", "Git", "Markdown", "Documentation", "Kubernetes SIG Release"],
+  "order": 2,
+  "status": "ongoing",
+  "slug": "sig-release-handbook",
+  "demoLink": "https://github.com/kubernetes/sig-release/pull/2953/changes",
+  "demoLinkRel": "noopener noreferrer"
+}
