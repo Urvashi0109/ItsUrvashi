@@ -1,7 +1,7 @@
 ---
 /**
  * Enhanced Project Component
- * 
+ *
  * Displays detailed project information with highlights and tech stack
  * Shows green "Ongoing" badge for active projects
  */
@@ -26,13 +26,13 @@ const isOngoing = status === 'ongoing';
         </span>
       )}
     </div>
-    
+
     <!-- Overview -->
     <div class="mb-4">
       <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-1.5">Overview</h3>
       <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">{desc}</p>
     </div>
-    
+
     <!-- Responsibilities -->
     {highlights && highlights.length > 0 && (
       <div class="mb-4">
@@ -47,7 +47,7 @@ const isOngoing = status === 'ongoing';
         </ul>
       </div>
     )}
-    
+
     <!-- Tech Stack -->
     <div>
       <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-2">Tech Stack</h3>
@@ -57,14 +57,14 @@ const isOngoing = status === 'ongoing';
         ))}
       </div>
     </div>
-    
+
     <!-- Action Buttons -->
     {(demoLink || githubLink) && (
       <div class="flex justify-end gap-2 mt-4 pt-3 border-t border-gray-200 dark:border-gray-700">
         {demoLink && (
-          <a 
-            href={demoLink} 
-            target="_blank" 
+          <a
+            href={demoLink}
+            target="_blank"
             rel={demoLinkRel || "noopener noreferrer"}
             class="inline-flex items-center gap-1 px-3 py-1.5 text-sm bg-primary text-white rounded-lg font-medium hover:bg-primary-600 transition-colors"
           >
@@ -75,9 +75,9 @@ const isOngoing = status === 'ongoing';
           </a>
         )}
         {githubLink && (
-          <a 
-            href={githubLink} 
-            target="_blank" 
+          <a
+            href={githubLink}
+            target="_blank"
             rel="noopener noreferrer"
             class="inline-flex items-center gap-1 px-3 py-1.5 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg font-medium transition-colors"
           >

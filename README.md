@@ -164,7 +164,7 @@ This portfolio combines three design approaches:
 
 - **Hero Section**: Eye-catching introduction with gradient background
 - **Skills Grid**: Organized technical skills with color-coded badges
-- **Enhanced Project Cards**: 
+- **Enhanced Project Cards**:
   - Multi-paragraph descriptions
   - Bullet-point highlights
   - Technology badges

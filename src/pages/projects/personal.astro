@@ -40,8 +40,8 @@ const categoryMeta = getCategoryMetadata(category);
     <div class="flex flex-wrap gap-1 mb-8 bg-gray-100 dark:bg-gray-800 p-1 rounded-lg">
       <a href={`${base}projects`} class="px-4 py-2 text-sm font-medium rounded-md hover:bg-white/50 dark:hover:bg-gray-700/50 transition-colors">All Projects</a>
       {projectCategories.map(cat => (
-        <a 
-          href={`${base}projects/${cat.slug}`} 
+        <a
+          href={`${base}projects/${cat.slug}`}
           class={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${cat.slug === category ? 'bg-white dark:bg-gray-700 shadow-sm' : 'hover:bg-white/50 dark:hover:bg-gray-700/50'}`}
         >
           {cat.name}

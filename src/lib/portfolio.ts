@@ -22,12 +22,12 @@ const portfolioModules = import.meta.glob<{ default: Project }>('../content/port
 // Get all projects
 export function getAllProjects(): Project[] {
   const projects: Project[] = [];
-  
+
   for (const path in portfolioModules) {
     const project = portfolioModules[path].default;
     projects.push(project);
   }
-  
+
   // Sort by order
   return projects.sort((a, b) => a.order - b.order);
 }
