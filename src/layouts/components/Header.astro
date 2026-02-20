@@ -102,12 +102,13 @@ const menu = [
 	</style>
 
 	<script is:inline>
+		// Theme detection: localStorage takes priority over system preference
 		const theme = (() => {
-			if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-				return 'dark';
-			}
 			if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
 				return localStorage.getItem('theme');
+			}
+			if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				return 'dark';
 			}
 			return 'light';
 		})();

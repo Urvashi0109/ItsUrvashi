@@ -15,4 +15,11 @@
 		font-family: 'Inconsolata', monospace;
 		font-size: 0.875rem;
 	}
+
+	/* Fix highlighted/bold text visibility in dark mode */
+	.dark strong,
+	.dark b {
+		color: #ffffff;
+		font-weight: 700;
+	}
 }
